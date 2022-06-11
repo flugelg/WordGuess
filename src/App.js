@@ -1,9 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import Water from './components/Water';
+import WordGuess from './components/WordGuess';
+import Word from './components/Word';
+
 
 function App() {
   return (
-      <h1>WORD GUESS</h1>
+    <div>
+      <Word/>
+      <WordGuess />
+      <Water/>
+    </div>
   );
 }
 
