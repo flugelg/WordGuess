@@ -17,7 +17,6 @@ const WordGuess = () => {
     const displayAlphabet= alphabet.map((letter)=> {
         return(
             <h2 className='displayLetters' key={letter} id={letter} onClick={handleLetterClick}>{letter}</h2>
-
         )
     })
 
