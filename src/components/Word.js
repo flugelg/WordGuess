@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Word = () => {
+const Word = ({wordReceived}) => {
     const [word, setWord] = useState([]);
     let wordString;
     let unikey = 0;
@@ -16,6 +16,7 @@ const Word = () => {
       wordString = fetchword.toString();
       setWord([...wordString])
       console.log(fetchword)
+      wordReceived(wordString)
     }
 
     const displayWord = word.map((letter)=> {
