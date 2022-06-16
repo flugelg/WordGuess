@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Word = ({setWordToGuess}) => {
+const Word = ({setWordToGuess, containsLetter}) => {
     const [word, setWord] = useState([]);
     let wordString;
     let unikey = 0;
@@ -24,9 +24,6 @@ const Word = ({setWordToGuess}) => {
         <h2 className='wordLetter' id={letter} key={unikey+=1}>_</h2>
       )
     })
-   
-    console.log(word)
-
   return (
     <div className='displayWord'>{displayWord}</div>
   )

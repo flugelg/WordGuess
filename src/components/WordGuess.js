@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const WordGuess = ({wordToGuess}) => {
+const WordGuess = ({wordToGuess, setContainsLetter, containsLetter}) => {
     const [letter, setLetter] = useState([]);
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -11,9 +11,10 @@ const WordGuess = ({wordToGuess}) => {
     // console.log(letter)
 
     function handleLetterClick(e) {
+        let upperCaseWord = wordToGuess.toUpperCase();
         let letterPicked = e.target.id;
-        console.log(letterPicked)
-        console.log("word received: ", wordToGuess)
+        setContainsLetter(upperCaseWord.includes(letterPicked))
+        console.log(letterPicked);
     }
 
     const displayAlphabet= alphabet.map((letter)=> {
