@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const WordGuess = ({wordPicked}) => {
+const WordGuess = ({wordToGuess}) => {
     const [letter, setLetter] = useState([]);
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -11,8 +11,9 @@ const WordGuess = ({wordPicked}) => {
     // console.log(letter)
 
     function handleLetterClick(e) {
-        console.log(e.target.id)
-        console.log("word received: ", wordPicked)
+        let letterPicked = e.target.id;
+        console.log(letterPicked)
+        console.log("word received: ", wordToGuess)
     }
 
     const displayAlphabet= alphabet.map((letter)=> {

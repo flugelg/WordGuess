@@ -4,17 +4,12 @@ import Water from './components/Water';
 import WordGuess from './components/WordGuess';
 import Word from './components/Word';
 
-const wordReceived = (chosenWord) => {
-  console.log("word sent is: ", chosenWord)
-  wordPicked = chosenWord;
-}
-
 function App() {
-  const [wordToGuess, setWordToGuess]
+  const [wordToGuess, setWordToGuess] = useState()
   return (
     <div>
-      <Word wordReceived = {wordReceived}/>
-      <WordGuess wordPicked = {wordPicked}/>
+      <Word setWordToGuess = {setWordToGuess}/>
+      <WordGuess wordToGuess = {wordToGuess}/>
       <Water/>
     </div>
   );

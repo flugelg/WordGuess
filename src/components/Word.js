@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Word = ({wordReceived}) => {
+const Word = ({setWordToGuess}) => {
     const [word, setWord] = useState([]);
     let wordString;
     let unikey = 0;
@@ -16,7 +16,7 @@ const Word = ({wordReceived}) => {
       wordString = fetchword.toString();
       setWord([...wordString])
       console.log(fetchword)
-      wordReceived(wordString)
+      setWordToGuess(wordString)
     }
 
     const displayWord = word.map((letter)=> {
