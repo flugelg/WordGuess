@@ -1,20 +1,12 @@
 import React, {useState} from 'react'
 
-const WordGuess = ({word, wordToGuess, setContainsLetter, containsLetter, hiddenArray, setHiddenArray, setWaveHeight, waveHeight, setWrongGuess, wrongGuess}) => {
-    const [letter, setLetter] = useState([]);
+const WordGuess = ({wordToGuess, hiddenArray, setHiddenArray, setWaveHeight, waveHeight, setWrongGuess, wrongGuess}) => {
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-
-
-    const handleChange = (event) => {
-        setLetter([...letter, event.target.value])
-    }
-    // console.log(letter)
 
     function handleLetterClick(e) {
         let upperCaseWord = wordToGuess.toUpperCase();
         let letterPicked = e.target.id;
         let guessArray = [...hiddenArray]
-        setContainsLetter(upperCaseWord.includes(letterPicked))
         console.log("letter picked: ",letterPicked);
 
         if(upperCaseWord.includes(letterPicked)){

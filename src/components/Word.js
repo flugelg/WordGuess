@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Word = ({setWord, word, setWordToGuess, containsLetter, setHiddenArray, hiddenArray}) => {
+const Word = ({setWord, setWordToGuess, setHiddenArray, hiddenArray}) => {
     let wordString;
     let unikey = 0;
     let newArray = [];
