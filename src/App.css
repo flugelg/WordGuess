@@ -58,6 +58,23 @@ body{
   bottom: 50%;
 }
 
+#wrongLetterContainer{
+  top: 5vw;
+  left: 5vw;
+  position: fixed;
+  border-style: solid;
+  width: 12em;
+  height: 5em;
+}
+
+#wrongLetter{
+  font-size: 2em;
+}
+
+.center{
+  text-align: center;
+}
+
 /* @keyframes move {
   0% {
     padding-top: 90vh;

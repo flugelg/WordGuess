@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const WordGuess = ({word, wordToGuess, setContainsLetter, containsLetter, hiddenArray, setHiddenArray, setWaveHeight, waveHeight}) => {
+const WordGuess = ({word, wordToGuess, setContainsLetter, containsLetter, hiddenArray, setHiddenArray, setWaveHeight, waveHeight, setWrongGuess, wrongGuess}) => {
     const [letter, setLetter] = useState([]);
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -29,9 +29,13 @@ const WordGuess = ({word, wordToGuess, setContainsLetter, containsLetter, hidden
               })
               console.log("guess array: ", guessArray)
         }
-        else{
+        else if(!wrongGuess.includes(letterPicked)){
             console.log(letterPicked,": is not in the word")
             setWaveHeight(waveHeight - 15);
+            setWrongGuess([...wrongGuess, letterPicked])
+        }
+        else{
+            console.log("You already picked that letter")
         }
     }
 
