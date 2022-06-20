@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const WordGuess = ({wordToGuess, setContainsLetter, containsLetter}) => {
+const WordGuess = ({word, wordToGuess, setContainsLetter, containsLetter, hiddenArray, setHiddenArray, setWaveHeight, waveHeight}) => {
     const [letter, setLetter] = useState([]);
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -13,8 +13,26 @@ const WordGuess = ({wordToGuess, setContainsLetter, containsLetter}) => {
     function handleLetterClick(e) {
         let upperCaseWord = wordToGuess.toUpperCase();
         let letterPicked = e.target.id;
+        let guessArray = [...hiddenArray]
         setContainsLetter(upperCaseWord.includes(letterPicked))
-        console.log(letterPicked);
+        console.log("letter picked: ",letterPicked);
+
+        if(upperCaseWord.includes(letterPicked)){
+            console.log("Word includes a: ", letterPicked)    
+            let indices = [], i=-1;
+            while((i=upperCaseWord.indexOf(letterPicked, i+1)) >= 0) indices.push(i);
+            console.log("letter is at index: ", indices);
+
+            const inputGuess = indices.map((letter)=> {
+                guessArray.splice(letter, 1, letterPicked);
+                setHiddenArray(guessArray);
+              })
+              console.log("guess array: ", guessArray)
+        }
+        else{
+            console.log(letterPicked,": is not in the word")
+            setWaveHeight(waveHeight - 15);
+        }
     }
 
     const displayAlphabet= alphabet.map((letter)=> {
