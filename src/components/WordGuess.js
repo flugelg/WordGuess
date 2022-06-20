@@ -31,7 +31,7 @@ const WordGuess = ({word, wordToGuess, setContainsLetter, containsLetter, hidden
         }
         else if(!wrongGuess.includes(letterPicked)){
             console.log(letterPicked,": is not in the word")
-            setWaveHeight(waveHeight - 15);
+            setWaveHeight(waveHeight - 13.5);
             setWrongGuess([...wrongGuess, letterPicked])
         }
         else{

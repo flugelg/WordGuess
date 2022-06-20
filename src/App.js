@@ -7,7 +7,7 @@ import WrongLetter from './components/WrongLetter';
 
 
 function App() {
-  const [waveHeight, setWaveHeight] = useState(90);
+  const [waveHeight, setWaveHeight] = useState(81);
   const [wordToGuess, setWordToGuess] = useState();
   const [containsLetter, setContainsLetter] = useState(false);
   const [hiddenArray, setHiddenArray] = useState([])
