@@ -25,7 +25,7 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
             console.log(letterPicked,": is not in the word")
             setWaveHeight(waveHeight - 13.5);
             setWrongGuess([...wrongGuess, letterPicked])
-            if (wrongGuess.length === 1) {
+            if (wrongGuess.length === 5) {
                 setIsGameOver(true);
                 setHiddenArray(wordToGuess.split(""));
             }

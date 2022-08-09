@@ -11,6 +11,8 @@ import WordGuess from './WordGuess';
 
 const Water = ({waveHeight, wrongGuess}) => {
 
+    const posArr = [pos1, pos2, pos3, pos4, pos5, pos6];
+    let i = 0;
     const [stickPos, setStickPos] = useState(pos1);
 
     // switch (wrongGuess.length) {
@@ -23,18 +25,31 @@ const Water = ({waveHeight, wrongGuess}) => {
     //     default :
     //         setStickPos(pos1);
     // }
+    
+    
 
-    if (wrongGuess.length === 1) {
-        setStickPos('change')
-    }
 
     return (
         <>
-        {/* <div id="guy-container">
-        <img class="stick-guy" src={pos1}></img>
-        </div> */}
         <div id="wave" style={{'paddingTop': `${waveHeight}vh`}}>
-        <img class="stick-guy" src={stickPos}></img>
+        {
+            wrongGuess.length === 0 ? <img className="stick-guy" src={pos1}></img> : null
+        }
+        {
+            wrongGuess.length === 1 ? <img className="stick-guy" src={pos2}></img> : null
+        }
+        {
+            wrongGuess.length === 2 ? <img className="stick-guy" src={pos3}></img> : null
+        }
+        {
+            wrongGuess.length === 3 ? <img className="stick-guy" src={pos4}></img> : null
+        }
+        {
+            wrongGuess.length === 4 ? <img className="stick-guy" src={pos5}></img> : null
+        }
+        {
+            wrongGuess.length === 5 ? <img className="stick-guy" src={pos6}></img> : null
+        }
             <Wave 
             style={{ zIndex: -1 }} 
             options={{ 
