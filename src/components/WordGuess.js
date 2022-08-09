@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const WordGuess = ({wordToGuess, hiddenArray, setHiddenArray, setWaveHeight, waveHeight, setWrongGuess, wrongGuess}) => {
+const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, setWaveHeight, waveHeight, setWrongGuess, wrongGuess}) => {
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
     function handleLetterClick(e) {
@@ -25,6 +25,10 @@ const WordGuess = ({wordToGuess, hiddenArray, setHiddenArray, setWaveHeight, wav
             console.log(letterPicked,": is not in the word")
             setWaveHeight(waveHeight - 13.5);
             setWrongGuess([...wrongGuess, letterPicked])
+            if (wrongGuess.length === 1) {
+                setIsGameOver(true);
+                setHiddenArray(wordToGuess.split(""));
+            }
         }
         else{
             console.log("You already picked that letter")

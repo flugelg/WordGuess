@@ -75,6 +75,18 @@ body{
   text-align: center;
 }
 
+#guy-container {
+  position: relative;
+}
+
+.stick-guy {
+  height: 10em;
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  z-index: -1;
+}
+
 /* @keyframes move {
   0% {
     padding-top: 90vh;
