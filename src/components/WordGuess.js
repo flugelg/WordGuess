@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, setWaveHeight, waveHeight, setWrongGuess, wrongGuess}) => {
+const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, setWaveHeight, waveHeight, setWrongGuess, wrongGuess, setDidWin}) => {
     const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
     function handleLetterClick(e) {
@@ -22,6 +22,7 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
               })
               if(guessArray.toString() === wordArray.toString()){
                 setIsGameOver(true);
+                setDidWin(true);
             }
         }
         else if(!wrongGuess.includes(letterPicked)){
@@ -31,6 +32,7 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
             if (wrongGuess.length === 5) {
                 setIsGameOver(true);
                 setHiddenArray(wordArray);
+                setDidWin(false);
             }
         }
         else{
