@@ -10,10 +10,10 @@ const GameOver = ({setWaveHeight, setWrongGuess, setRestartGame, setIsGameOver, 
     }
 
     return (
-        <>
+        <div id="game-over-container">
             <h1>YOU LOSE</h1>
             <button className="game-over-button" onClick={restart}>Button 28</button>
-        </>
+        </div>
     )
 }
 
