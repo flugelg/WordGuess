@@ -1,8 +1,19 @@
 import React from "react";
 
-const GameOver = () => {
+const GameOver = ({setWaveHeight, setWrongGuess, setRestartGame, setIsGameOver, restartGame}) => {
+
+    const restart = () => {
+        setWaveHeight(81)
+        setWrongGuess([])
+        setRestartGame(restartGame + 1)
+        setIsGameOver(false)
+    }
+
     return (
-        <h1>YOU LOSE</h1>
+        <>
+            <h1>YOU LOSE</h1>
+            <button className="game-over-button" onClick={restart}>Button 28</button>
+        </>
     )
 }
 

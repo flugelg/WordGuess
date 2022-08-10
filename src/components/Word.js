@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const Word = ({setWord, setWordToGuess, setHiddenArray, hiddenArray}) => {
+const Word = ({setWord, setWordToGuess, setHiddenArray, hiddenArray, restartGame}) => {
     let wordString;
     let unikey = 0;
     let newArray = [];
@@ -9,7 +9,7 @@ const Word = ({setWord, setWordToGuess, setHiddenArray, hiddenArray}) => {
         fetch("https://random-word-api.herokuapp.com/word")
         .then(res => res.json())
         .then(data => handleFetch(data))
-    }, [])
+    }, [restartGame])
 
 
     const handleFetch = (fetchword) => {

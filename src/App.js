@@ -15,16 +15,17 @@ function App() {
   const [word, setWord] = useState([]);
   const [wrongGuess, setWrongGuess] = useState([]);
   const [isGameOver, setIsGameOver] = useState(false);
+  const [restartGame, setRestartGame] = useState(0);
 
 
   return (
     <div>
       <WrongLetter wrongGuess={wrongGuess}/>
-      <Word setWord = {setWord} setWordToGuess = {setWordToGuess} setHiddenArray={setHiddenArray} hiddenArray={hiddenArray}/>
+      <Word setWord = {setWord} setWordToGuess = {setWordToGuess} setHiddenArray={setHiddenArray} hiddenArray={hiddenArray} restartGame = {restartGame}/>
       {!isGameOver ?
       <WordGuess word = {word} wordToGuess = {wordToGuess} hiddenArray={hiddenArray} setHiddenArray={setHiddenArray} setWaveHeight={setWaveHeight} waveHeight={waveHeight} setWrongGuess={setWrongGuess} wrongGuess={wrongGuess} setIsGameOver={setIsGameOver}/>
       :
-      <GameOver/> 
+      <GameOver setWaveHeight = {setWaveHeight} setWrongGuess = {setWrongGuess} setRestartGame = {setRestartGame} restartGame = {restartGame} setIsGameOver = {setIsGameOver} setHiddenArray = {setHiddenArray}/> 
       }
       <Water waveHeight={waveHeight} wrongGuess={wrongGuess}/>
     </div>
