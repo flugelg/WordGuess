@@ -79,12 +79,114 @@ body{
   position: relative;
 }
 
+@keyframes moveStick {
+  0% {
+    left: 50vw;
+  }
+
+  20% {
+    top: 5px;
+  }
+
+  40% {
+    left: 49vw;
+  }
+
+  60% {
+    top: 8px;
+  }
+
+  80% {
+    left: 50.5vw;
+  }
+
+  100% {
+    left: 50vw;
+  }
+}
+
+
+
 .stick-guy {
   height: 10em;
   position: absolute;
   top: 0;
   left: 50vw;
+  animation-name: moveStick;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
+
+@keyframes losingStick {
+  0% {
+    visibility: visible;
+  }
+
+  10% {
+    visibility: visible;
+    top: 20%
+  }
+
+  20% {
+    visibility: visible;
+    top: 40%
+  }
+
+  30% {
+    visibility: visible;
+    top: 60%
+  }
+
+  40% {
+    visibility: visible;
+    top: 80%
+  }
+
+  50% {
+    visibility: visible;
+    top: 100%;
+  }
+
+  60% {
+    visibility: visible;
+    top: 120%
+  }
+
+  70% {
+    visibility: visible;
+    top: 140%;
+  }
+
+  80% {
+    visibility: visible;
+    top: 160%
+  }
+
+  90% {
+    visibility: visible;
+    top: 180%;
+  }
+
+  100% {
+    visibility: hidden;
+    top: 200%;
+    width: 0;
+    height: 0;
+  }
+}
+
+.lost-stick-guy {
+  visibility: hidden;
+  height: 10em;
+  top: 0;
+  left: 50vw;
+  position: absolute;
+  animation-name: losingStick;
+  animation-duration: 3s;
+  /* animation-iteration-count: infinite; */
+  animation-timing-function: linear;
+}
+
 
 .game-over-button {
   appearance: none;

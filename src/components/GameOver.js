@@ -1,12 +1,13 @@
 import React from "react";
 
-const GameOver = ({setWaveHeight, setWrongGuess, setRestartGame, setIsGameOver, restartGame, didWin}) => {
+const GameOver = ({setWaveHeight, setWrongGuess, setRestartGame, setIsGameOver, restartGame, didWin, setDidWin}) => {
 
     const restart = () => {
         setWaveHeight(81)
         setWrongGuess([])
         setRestartGame(restartGame + 1)
         setIsGameOver(false)
+        setDidWin(undefined);
     }
 
     return (

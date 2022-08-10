@@ -26,9 +26,9 @@ function App() {
       {!isGameOver ?
       <WordGuess word = {word} wordToGuess = {wordToGuess} hiddenArray={hiddenArray} setHiddenArray={setHiddenArray} setWaveHeight={setWaveHeight} waveHeight={waveHeight} setWrongGuess={setWrongGuess} wrongGuess={wrongGuess} setIsGameOver={setIsGameOver} setDidWin = {setDidWin}/>
       :
-      <GameOver setWaveHeight = {setWaveHeight} setWrongGuess = {setWrongGuess} setRestartGame = {setRestartGame} restartGame = {restartGame} setIsGameOver = {setIsGameOver} setHiddenArray = {setHiddenArray} didWin = {didWin}/> 
+      <GameOver setWaveHeight = {setWaveHeight} setWrongGuess = {setWrongGuess} setRestartGame = {setRestartGame} restartGame = {restartGame} setIsGameOver = {setIsGameOver} setHiddenArray = {setHiddenArray} didWin = {didWin} setDidWin={setDidWin}/> 
       }
-      <Water waveHeight={waveHeight} wrongGuess={wrongGuess}/>
+      <Water waveHeight={waveHeight} wrongGuess={wrongGuess} didWin={didWin}/>
     </div>
   );
 }
