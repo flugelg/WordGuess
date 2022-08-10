@@ -7,7 +7,8 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
         let upperCaseWord = wordToGuess.toUpperCase();
         let letterPicked = e.target.id;
         let guessArray = [...hiddenArray]
-        console.log("letter picked: ",letterPicked);
+        let wordArray = wordToGuess.toUpperCase().split("");
+        console.log(wordArray, " ", guessArray)
 
         if(upperCaseWord.includes(letterPicked)){
             console.log("Word includes a: ", letterPicked)    
@@ -19,7 +20,9 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
                 guessArray.splice(letter, 1, letterPicked);
                 setHiddenArray(guessArray);
               })
-              console.log("guess array: ", guessArray)
+              if(guessArray.toString() === wordArray.toString()){
+                setIsGameOver(true);
+            }
         }
         else if(!wrongGuess.includes(letterPicked)){
             console.log(letterPicked,": is not in the word")
@@ -27,7 +30,7 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
             setWrongGuess([...wrongGuess, letterPicked])
             if (wrongGuess.length === 5) {
                 setIsGameOver(true);
-                setHiddenArray(wordToGuess.split(""));
+                setHiddenArray(wordArray);
             }
         }
         else{
