@@ -16,20 +16,6 @@ const Water = ({waveHeight, wrongGuess, didWin}) => {
     let i = 0;
     const [stickPos, setStickPos] = useState(pos1);
 
-    // switch (wrongGuess.length) {
-    //     case 0 :
-    //         setStickPos(pos1);
-    //         break;
-    //     case 1 :
-    //         setStickPos(pos2);
-    //         break;
-    //     default :
-    //         setStickPos(pos1);
-    // }
-    
-    console.log("didwni from water: ", didWin);
-
-
     return (
         <>
         <div id="wave" style={{'paddingTop': `${waveHeight}vh`}}>

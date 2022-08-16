@@ -12,7 +12,7 @@ const GameOver = ({setWaveHeight, setWrongGuess, setRestartGame, setIsGameOver, 
 
     return (
         <div id="game-over-container">
-            {didWin ? <div class="container">
+            {didWin ? <div className="container">
                 <div className="confetti"></div>
                 <div className="confetti"></div>
                 <div className="confetti"></div>
