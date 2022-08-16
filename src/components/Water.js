@@ -65,7 +65,7 @@ const Water = ({waveHeight, wrongGuess, didWin}) => {
                 amplitude: 10,
                 points: 3
             }} 
-            fill="#116EA0" />
+            fill="#5ac5ff" />
         </div>
         </>
     )

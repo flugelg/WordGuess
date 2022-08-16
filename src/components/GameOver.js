@@ -12,7 +12,30 @@ const GameOver = ({setWaveHeight, setWrongGuess, setRestartGame, setIsGameOver, 
 
     return (
         <div id="game-over-container">
-            {didWin ? <h1>YOU WIN</h1> : <h1>YOU LOSE</h1>}
+            {didWin ? <div class="container">
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <div className="confetti"></div>
+                <h1 className="outcome" id="outcome-win">YOU WIN</h1>
+                </div> : <h1 className="outcome" id="outcome-lose">YOU LOSE</h1>}
             <button className="game-over-button" onClick={restart}>Play Again</button>
         </div>
     )
