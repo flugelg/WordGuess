@@ -332,3 +332,31 @@ body{
   75% { transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw,80vh); }
   100% { transform: rotateZ(15deg) rotateY(1440deg) translate(10vw,110vh); }
 }
+
+
+@media only screen and (max-width: 1162px){
+  
+  .displayWord {
+    margin-bottom: 10em;
+  }
+}
+
+@media only screen and (max-width: 970px){
+  /* .displayLetters {
+    font-size: 1em;
+  } */
+  .displayWord {
+    /* font-size: 0.5em; */
+    margin-bottom: 10em;
+  }
+}
+
+@media only screen and (max-width: 601px){
+  /* .displayLetters {
+    font-size: 0.85em;
+  } */
+  .displayWord {
+    margin-bottom: 2em;
+    
+  }
+}
