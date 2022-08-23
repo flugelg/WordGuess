@@ -18,8 +18,6 @@ const Word = ({setWord, setWordToGuess, setHiddenArray, hiddenArray, restartGame
       setWordToGuess(wordString)
       newArray = new Array([...wordString].length).fill("_")
       setHiddenArray(newArray)
-
-      console.log("Word: ", wordString)
     }
 
     const displayWord = hiddenArray.map((letter)=> {

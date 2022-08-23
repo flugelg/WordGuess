@@ -10,14 +10,10 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
         let guessArray = [...hiddenArray]
         let wordArray = wordToGuess.toUpperCase().split("");
         e.target.className = "pickedLetters";
-        console.log("letterPicked", letterPicked)
-        console.log(wordArray, " ", guessArray)
 
-        if(upperCaseWord.includes(letterPicked)){
-            console.log("Word includes a: ", letterPicked)    
+        if(upperCaseWord.includes(letterPicked)){  
             let indices = [], i=-1;
             while((i=upperCaseWord.indexOf(letterPicked, i+1)) >= 0) indices.push(i);
-            console.log("letter is at index: ", indices);
 
             const inputGuess = indices.map((letter)=> {
                 guessArray.splice(letter, 1, letterPicked);
@@ -29,7 +25,6 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
             }
         }
         else if(!wrongGuess.includes(letterPicked)){
-            console.log(letterPicked,": is not in the word")
             setWaveHeight(waveHeight - 13.5);
             setWrongGuess([...wrongGuess, letterPicked])
             if (wrongGuess.length === 5) {
@@ -37,9 +32,6 @@ const WordGuess = ({setIsGameOver, wordToGuess, hiddenArray, setHiddenArray, set
                 setHiddenArray(wordArray);
                 setDidWin(false);
             }
-        }
-        else{
-            console.log("You already picked that letter")
         }
     }
 
