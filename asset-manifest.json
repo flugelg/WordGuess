@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/WordGuess/static/css/main.9b2f733c.css",
+    "main.js": "/WordGuess/static/js/main.f62d0a58.js",
+    "static/media/pos_6.png": "/WordGuess/static/media/pos_6.aea644744f371e5c9316.png",
+    "static/media/pos_4.png": "/WordGuess/static/media/pos_4.d213cd8318bb7adea288.png",
+    "static/media/pos_3.png": "/WordGuess/static/media/pos_3.4b492a1d66738886f785.png",
+    "static/media/pos_5.png": "/WordGuess/static/media/pos_5.dfd91cf8f5db2b414ef5.png",
+    "static/media/pos_1.png": "/WordGuess/static/media/pos_1.6a9ccb2dfa12bdfa97a3.png",
+    "static/media/pos_2.png": "/WordGuess/static/media/pos_2.6c2a03796770c7bbe9f0.png",
+    "static/media/pos_7.png": "/WordGuess/static/media/pos_7.f072a283e6a075571b5d.png",
+    "index.html": "/WordGuess/index.html",
+    "main.9b2f733c.css.map": "/WordGuess/static/css/main.9b2f733c.css.map",
+    "main.f62d0a58.js.map": "/WordGuess/static/js/main.f62d0a58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b2f733c.css",
+    "static/js/main.f62d0a58.js"
+  ]
+}
