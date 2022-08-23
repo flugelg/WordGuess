@@ -7,8 +7,6 @@ import pos4 from "../stickguy/pos_4.png";
 import pos5 from "../stickguy/pos_5.png";
 import pos6 from "../stickguy/pos_6.png";
 import pos7 from "../stickguy/pos_7.png";
-import shark1 from "../fish/shark1.png";
-import WordGuess from './WordGuess';
 
 
 const Water = ({waveHeight, wrongGuess, didWin}) => {
